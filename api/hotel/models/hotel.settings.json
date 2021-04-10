@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "hotels",
   "info": {
-    "name": "hotel"
+    "name": "hotel",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -19,8 +20,25 @@
       "type": "richtext"
     },
     "categories": {
-      "via": "hotels",
-      "collection": "category"
+      "collection": "category",
+      "via": "hotels"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
     }
   }
 }
