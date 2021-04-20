@@ -23,8 +23,14 @@
       "collection": "category",
       "via": "hotels"
     },
-    "images": {
-      "collection": "file",
+    "price": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "date"
+    },
+    "image": {
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -34,11 +40,9 @@
       "plugin": "upload",
       "required": false
     },
-    "price": {
-      "type": "integer"
-    },
-    "date": {
-      "type": "date"
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     }
   }
 }
