@@ -14,17 +14,20 @@
     "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false,
+      "maxLength": 50
     },
     "description": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": true
     },
     "categories": {
       "collection": "category",
       "via": "hotels"
     },
     "price": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": true
     },
     "date": {
       "type": "date"
@@ -33,16 +36,74 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images",
         "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "adress": {
+      "type": "string",
+      "required": true
+    },
+    "images_url": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
         "videos"
       ],
       "plugin": "upload",
       "required": false
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
+    "guestNumber": {
+      "type": "string"
+    },
+    "pricePerNight": {
+      "type": "json"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "guests": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "dobbel",
+        "family"
+      ]
+    },
+    "bed": {
+      "type": "enumeration",
+      "enum": [
+        "single",
+        "dobbel",
+        "king"
+      ]
+    },
+    "internet": {
+      "type": "boolean"
+    },
+    "breakfast": {
+      "type": "boolean"
+    },
+    "airconditioner": {
+      "type": "boolean"
+    },
+    "pets": {
+      "type": "boolean"
+    },
+    "roomCleaning": {
+      "type": "boolean"
     }
   }
 }
