@@ -104,6 +104,24 @@
     },
     "roomCleaning": {
       "type": "boolean"
+    },
+    "parking": {
+      "type": "boolean"
+    },
+    "friendly_family_rooms": {
+      "type": "boolean"
+    },
+    "airport_shuttle": {
+      "type": "boolean"
+    },
+    "non_smoking_room": {
+      "type": "boolean"
+    },
+    "tea_coffee_maker": {
+      "type": "boolean"
+    },
+    "bar": {
+      "type": "boolean"
     }
   }
 }
