@@ -45,7 +45,8 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "name"
+      "targetField": "name",
+      "required": true
     },
     "adress": {
       "type": "string",
@@ -122,6 +123,9 @@
     },
     "bar": {
       "type": "boolean"
+    },
+    "rating": {
+      "type": "decimal"
     }
   }
 }
