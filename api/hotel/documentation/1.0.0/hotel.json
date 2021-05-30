@@ -520,8 +520,6 @@
           "name",
           "description",
           "price",
-          "image",
-          "slug",
           "adress"
         ],
         "properties": {
@@ -569,10 +567,6 @@
           },
           "price": {
             "type": "number"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "image": {
             "required": [
@@ -720,9 +714,6 @@
           "guestNumber": {
             "type": "string"
           },
-          "pricePerNight": {
-            "type": "object"
-          },
           "latitude": {
             "type": "number"
           },
@@ -781,6 +772,40 @@
           "rating": {
             "type": "number"
           },
+          "img_url": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "images_hotels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "hotel": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -792,7 +817,6 @@
           "name",
           "description",
           "price",
-          "slug",
           "adress"
         ],
         "properties": {
@@ -812,10 +836,6 @@
           "price": {
             "type": "number"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "slug": {
             "type": "uid"
           },
@@ -824,9 +844,6 @@
           },
           "guestNumber": {
             "type": "string"
-          },
-          "pricePerNight": {
-            "type": "object"
           },
           "latitude": {
             "type": "number"
@@ -885,6 +902,15 @@
           },
           "rating": {
             "type": "number"
+          },
+          "img_url": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

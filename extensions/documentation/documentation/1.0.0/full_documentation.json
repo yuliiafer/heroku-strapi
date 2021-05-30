@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/10/2021 9:29:35 PM"
+    "x-generation-date": "05/24/2021 10:28:15 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4645,8 +4645,6 @@
                 "name",
                 "description",
                 "price",
-                "image",
-                "slug",
                 "adress"
               ],
               "properties": {
@@ -4668,9 +4666,6 @@
                 "price": {
                   "type": "number"
                 },
-                "date": {
-                  "type": "string"
-                },
                 "image": {
                   "type": "string"
                 },
@@ -4688,9 +4683,6 @@
                 },
                 "guestNumber": {
                   "type": "string"
-                },
-                "pricePerNight": {
-                  "type": "object"
                 },
                 "latitude": {
                   "type": "number"
@@ -4750,6 +4742,15 @@
                 "rating": {
                   "type": "number"
                 },
+                "img_url": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -4800,8 +4801,6 @@
           "name",
           "description",
           "price",
-          "image",
-          "slug",
           "adress"
         ],
         "properties": {
@@ -4849,10 +4848,6 @@
           },
           "price": {
             "type": "number"
-          },
-          "date": {
-            "type": "string",
-            "format": "date"
           },
           "image": {
             "required": [
@@ -5000,9 +4995,6 @@
           "guestNumber": {
             "type": "string"
           },
-          "pricePerNight": {
-            "type": "object"
-          },
           "latitude": {
             "type": "number"
           },
@@ -5061,6 +5053,40 @@
           "rating": {
             "type": "number"
           },
+          "img_url": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "images_hotels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "hotel": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5072,7 +5098,6 @@
           "name",
           "description",
           "price",
-          "slug",
           "adress"
         ],
         "properties": {
@@ -5092,10 +5117,6 @@
           "price": {
             "type": "number"
           },
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
           "slug": {
             "type": "uid"
           },
@@ -5104,9 +5125,6 @@
           },
           "guestNumber": {
             "type": "string"
-          },
-          "pricePerNight": {
-            "type": "object"
           },
           "latitude": {
             "type": "number"
@@ -5165,6 +5183,15 @@
           },
           "rating": {
             "type": "number"
+          },
+          "img_url": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -5256,6 +5283,129 @@
               }
             }
           },
+          "hotel": {
+            "required": [
+              "id",
+              "name",
+              "description",
+              "price",
+              "adress"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "price": {
+                "type": "number"
+              },
+              "image": {
+                "type": "string"
+              },
+              "slug": {
+                "type": "uid"
+              },
+              "adress": {
+                "type": "string"
+              },
+              "images_url": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "guestNumber": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "number"
+              },
+              "longitude": {
+                "type": "number"
+              },
+              "guests": {
+                "type": "string",
+                "enum": [
+                  "single",
+                  "dobbel",
+                  "family"
+                ]
+              },
+              "bed": {
+                "type": "string",
+                "enum": [
+                  "single",
+                  "dobbel",
+                  "king"
+                ]
+              },
+              "internet": {
+                "type": "boolean"
+              },
+              "breakfast": {
+                "type": "boolean"
+              },
+              "airconditioner": {
+                "type": "boolean"
+              },
+              "pets": {
+                "type": "boolean"
+              },
+              "roomCleaning": {
+                "type": "boolean"
+              },
+              "parking": {
+                "type": "boolean"
+              },
+              "friendly_family_rooms": {
+                "type": "boolean"
+              },
+              "airport_shuttle": {
+                "type": "boolean"
+              },
+              "non_smoking_room": {
+                "type": "boolean"
+              },
+              "tea_coffee_maker": {
+                "type": "boolean"
+              },
+              "bar": {
+                "type": "boolean"
+              },
+              "rating": {
+                "type": "number"
+              },
+              "img_url": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5264,6 +5414,9 @@
       },
       "NewImages": {
         "properties": {
+          "hotel": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5327,51 +5480,6 @@
           "token": {
             "type": "string"
           },
-          "users_permissions_user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -5381,9 +5489,6 @@
       "NewToken": {
         "properties": {
           "token": {
-            "type": "string"
-          },
-          "users_permissions_user": {
             "type": "string"
           },
           "published_at": {

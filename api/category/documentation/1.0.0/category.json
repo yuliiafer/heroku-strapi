@@ -534,8 +534,6 @@
                 "name",
                 "description",
                 "price",
-                "image",
-                "slug",
                 "adress"
               ],
               "properties": {
@@ -557,9 +555,6 @@
                 "price": {
                   "type": "number"
                 },
-                "date": {
-                  "type": "string"
-                },
                 "image": {
                   "type": "string"
                 },
@@ -577,9 +572,6 @@
                 },
                 "guestNumber": {
                   "type": "string"
-                },
-                "pricePerNight": {
-                  "type": "object"
                 },
                 "latitude": {
                   "type": "number"
@@ -638,6 +630,15 @@
                 },
                 "rating": {
                   "type": "number"
+                },
+                "img_url": {
+                  "type": "string"
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 },
                 "published_at": {
                   "type": "string"

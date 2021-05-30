@@ -20,6 +20,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "hotel": {
+      "via": "images",
+      "model": "hotel"
     }
   }
 }

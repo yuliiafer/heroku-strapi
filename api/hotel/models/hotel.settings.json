@@ -29,9 +29,6 @@
       "type": "decimal",
       "required": true
     },
-    "date": {
-      "type": "date"
-    },
     "image": {
       "model": "file",
       "via": "related",
@@ -41,12 +38,12 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     },
     "slug": {
       "type": "uid",
       "targetField": "name",
-      "required": true
+      "required": false
     },
     "adress": {
       "type": "string",
@@ -65,9 +62,6 @@
     },
     "guestNumber": {
       "type": "string"
-    },
-    "pricePerNight": {
-      "type": "json"
     },
     "latitude": {
       "type": "float"
@@ -126,6 +120,13 @@
     },
     "rating": {
       "type": "decimal"
+    },
+    "img_url": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "images",
+      "via": "hotel"
     }
   }
 }
