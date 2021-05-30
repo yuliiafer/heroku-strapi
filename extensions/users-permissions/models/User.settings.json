@@ -58,6 +58,10 @@
       "via": "users",
       "plugin": "users-permissions",
       "configurable": false
+    },
+    "messages": {
+      "via": "users_permissions_user",
+      "collection": "messages"
     }
   }
 }
