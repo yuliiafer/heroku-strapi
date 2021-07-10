@@ -83,6 +83,9 @@
     },
     "link": {
       "type": "string"
+    },
+    "img_name": {
+      "type": "string"
     }
   }
 }

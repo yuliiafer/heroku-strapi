@@ -788,6 +788,9 @@
                 "link": {
                   "type": "string"
                 },
+                "img_name": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

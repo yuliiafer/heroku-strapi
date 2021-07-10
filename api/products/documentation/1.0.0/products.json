@@ -803,6 +803,9 @@
           "link": {
             "type": "string"
           },
+          "img_name": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -863,6 +866,9 @@
             "type": "boolean"
           },
           "link": {
+            "type": "string"
+          },
+          "img_name": {
             "type": "string"
           },
           "published_at": {
