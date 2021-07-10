@@ -125,8 +125,8 @@
       "type": "string"
     },
     "images": {
-      "collection": "images",
-      "via": "hotel"
+      "via": "hotel",
+      "collection": "images"
     }
   }
 }

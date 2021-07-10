@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/images": {
+    "/genres": {
       "get": {
         "deprecated": false,
-        "description": "Find all the images's records",
+        "description": "Find all the genres's records",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve genres document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Images"
+                    "$ref": "#/components/schemas/Genres"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new images record",
+        "description": "Create a new genres record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve genres document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Genres"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewImages"
+                "$ref": "#/components/schemas/NewGenres"
               }
             }
           }
         }
       }
     },
-    "/images/count": {
+    "/genres/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of images documents",
+        "description": "Retrieve the numver of genres documents",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve genres document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "parameters": []
       }
     },
-    "/images/{id}": {
+    "/genres/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one images record",
+        "description": "Find one genres record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve genres document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Genres"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single images record",
+        "description": "Update a single genres record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve genres document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Genres"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewImages"
+                "$ref": "#/components/schemas/NewGenres"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single images record",
+        "description": "Delete a single genres record",
         "responses": {
           "200": {
-            "description": "deletes a single images based on the ID supplied",
+            "description": "deletes a single genres based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Genres"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Images": {
+      "Genres": {
         "required": [
           "id"
         ],
@@ -522,198 +522,8 @@
           "id": {
             "type": "string"
           },
-          "images_hotels": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "hotel": {
-            "required": [
-              "id",
-              "name",
-              "description",
-              "price",
-              "adress"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "price": {
-                "type": "number"
-              },
-              "image": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "uid"
-              },
-              "adress": {
-                "type": "string"
-              },
-              "images_url": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "guestNumber": {
-                "type": "string"
-              },
-              "latitude": {
-                "type": "number"
-              },
-              "longitude": {
-                "type": "number"
-              },
-              "guests": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "dobbel",
-                  "family"
-                ]
-              },
-              "bed": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "dobbel",
-                  "king"
-                ]
-              },
-              "internet": {
-                "type": "boolean"
-              },
-              "breakfast": {
-                "type": "boolean"
-              },
-              "airconditioner": {
-                "type": "boolean"
-              },
-              "pets": {
-                "type": "boolean"
-              },
-              "roomCleaning": {
-                "type": "boolean"
-              },
-              "parking": {
-                "type": "boolean"
-              },
-              "friendly_family_rooms": {
-                "type": "boolean"
-              },
-              "airport_shuttle": {
-                "type": "boolean"
-              },
-              "non_smoking_room": {
-                "type": "boolean"
-              },
-              "tea_coffee_maker": {
-                "type": "boolean"
-              },
-              "bar": {
-                "type": "boolean"
-              },
-              "rating": {
-                "type": "number"
-              },
-              "img_url": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "name": {
+            "type": "string"
           },
           "products": {
             "type": "array",
@@ -794,88 +604,15 @@
               }
             }
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "img": {
-            "type": "string"
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewImages": {
+      "NewGenres": {
         "properties": {
-          "hotel": {
+          "name": {
             "type": "string"
           },
           "products": {
@@ -883,9 +620,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "img": {
-            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -903,7 +637,7 @@
   },
   "tags": [
     {
-      "name": "Images"
+      "name": "Genres"
     }
   ]
 }

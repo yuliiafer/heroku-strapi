@@ -794,6 +794,21 @@
                 "hotel": {
                   "type": "string"
                 },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "img": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

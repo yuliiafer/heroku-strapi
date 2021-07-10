@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "company": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "tax": {
+      "type": "string"
+    },
+    "genres": {
+      "collection": "genres",
+      "via": "products",
+      "dominant": true
+    },
+    "platforms": {
+      "collection": "platforms",
+      "via": "products",
+      "dominant": true
+    },
+    "medias": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "image": {
+      "type": "string"
+    },
+    "images": {
+      "collection": "images",
+      "via": "products",
+      "dominant": true
+    },
+    "reviews": {
+      "type": "integer"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "stars": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/images": {
+    "/products": {
       "get": {
         "deprecated": false,
-        "description": "Find all the images's records",
+        "description": "Find all the products's records",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve products document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Images"
+                    "$ref": "#/components/schemas/Products"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new images record",
+        "description": "Create a new products record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve products document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Products"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewImages"
+                "$ref": "#/components/schemas/NewProducts"
               }
             }
           }
         }
       }
     },
-    "/images/count": {
+    "/products/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of images documents",
+        "description": "Retrieve the numver of products documents",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve products document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "parameters": []
       }
     },
-    "/images/{id}": {
+    "/products/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one images record",
+        "description": "Find one products record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve products document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Products"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single images record",
+        "description": "Update a single products record",
         "responses": {
           "200": {
-            "description": "Retrieve images document(s)",
+            "description": "Retrieve products document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Images"
+                  "$ref": "#/components/schemas/Products"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewImages"
+                "$ref": "#/components/schemas/NewProducts"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single images record",
+        "description": "Delete a single products record",
         "responses": {
           "200": {
-            "description": "deletes a single images based on the ID supplied",
+            "description": "deletes a single products based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Images"
+          "Products"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Images": {
+      "Products": {
         "required": [
           "id"
         ],
@@ -522,83 +522,21 @@
           "id": {
             "type": "string"
           },
-          "images_hotels": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "name": {
+            "type": "string"
           },
-          "hotel": {
+          "price": {
+            "type": "integer"
+          },
+          "media": {
             "required": [
               "id",
               "name",
-              "description",
-              "price",
-              "adress"
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
@@ -607,104 +545,46 @@
               "name": {
                 "type": "string"
               },
-              "description": {
+              "alternativeText": {
                 "type": "string"
               },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "caption": {
+                "type": "string"
               },
-              "price": {
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
                 "type": "number"
               },
-              "image": {
+              "url": {
                 "type": "string"
               },
-              "slug": {
-                "type": "uid"
-              },
-              "adress": {
+              "previewUrl": {
                 "type": "string"
               },
-              "images_url": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "guestNumber": {
+              "provider": {
                 "type": "string"
               },
-              "latitude": {
-                "type": "number"
+              "provider_metadata": {
+                "type": "object"
               },
-              "longitude": {
-                "type": "number"
-              },
-              "guests": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "dobbel",
-                  "family"
-                ]
-              },
-              "bed": {
-                "type": "string",
-                "enum": [
-                  "single",
-                  "dobbel",
-                  "king"
-                ]
-              },
-              "internet": {
-                "type": "boolean"
-              },
-              "breakfast": {
-                "type": "boolean"
-              },
-              "airconditioner": {
-                "type": "boolean"
-              },
-              "pets": {
-                "type": "boolean"
-              },
-              "roomCleaning": {
-                "type": "boolean"
-              },
-              "parking": {
-                "type": "boolean"
-              },
-              "friendly_family_rooms": {
-                "type": "boolean"
-              },
-              "airport_shuttle": {
-                "type": "boolean"
-              },
-              "non_smoking_room": {
-                "type": "boolean"
-              },
-              "tea_coffee_maker": {
-                "type": "boolean"
-              },
-              "bar": {
-                "type": "boolean"
-              },
-              "rating": {
-                "type": "number"
-              },
-              "img_url": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "published_at": {
+              "related": {
                 "type": "string"
               },
               "created_by": {
@@ -715,7 +595,19 @@
               }
             }
           },
-          "products": {
+          "company": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "tax": {
+            "type": "string"
+          },
+          "genres": {
             "type": "array",
             "items": {
               "required": [
@@ -728,59 +620,11 @@
                 "name": {
                   "type": "string"
                 },
-                "price": {
-                  "type": "integer"
-                },
-                "media": {
-                  "type": "string"
-                },
-                "company": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "category": {
-                  "type": "string"
-                },
-                "tax": {
-                  "type": "string"
-                },
-                "genres": {
+                "products": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
-                },
-                "platforms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "medias": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "image": {
-                  "type": "string"
-                },
-                "images": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "reviews": {
-                  "type": "integer"
-                },
-                "stock": {
-                  "type": "integer"
-                },
-                "stars": {
-                  "type": "number"
                 },
                 "published_at": {
                   "type": "string"
@@ -794,7 +638,38 @@
               }
             }
           },
-          "images": {
+          "platforms": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "medias": {
             "type": "array",
             "items": {
               "required": [
@@ -864,8 +739,63 @@
               }
             }
           },
-          "img": {
+          "image": {
             "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "images_hotels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "hotel": {
+                  "type": "string"
+                },
+                "products": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "img": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "reviews": {
+            "type": "integer"
+          },
+          "stock": {
+            "type": "integer"
+          },
+          "stars": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -873,19 +803,55 @@
           }
         }
       },
-      "NewImages": {
+      "NewProducts": {
         "properties": {
-          "hotel": {
+          "name": {
             "type": "string"
           },
-          "products": {
+          "price": {
+            "type": "integer"
+          },
+          "company": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "tax": {
+            "type": "string"
+          },
+          "genres": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "img": {
+          "platforms": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "image": {
             "type": "string"
+          },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reviews": {
+            "type": "integer"
+          },
+          "stock": {
+            "type": "integer"
+          },
+          "stars": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
@@ -903,7 +869,7 @@
   },
   "tags": [
     {
-      "name": "Images"
+      "name": "Products"
     }
   ]
 }
