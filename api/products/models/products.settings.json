@@ -77,6 +77,9 @@
     },
     "stars": {
       "type": "decimal"
+    },
+    "availibity": {
+      "type": "boolean"
     }
   }
 }

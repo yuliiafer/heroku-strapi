@@ -797,6 +797,9 @@
           "stars": {
             "type": "number"
           },
+          "availibity": {
+            "type": "boolean"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -852,6 +855,9 @@
           },
           "stars": {
             "type": "number"
+          },
+          "availibity": {
+            "type": "boolean"
           },
           "published_at": {
             "type": "string",

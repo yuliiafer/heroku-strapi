@@ -592,6 +592,9 @@
                 "stars": {
                   "type": "number"
                 },
+                "availibity": {
+                  "type": "boolean"
+                },
                 "published_at": {
                   "type": "string"
                 },
