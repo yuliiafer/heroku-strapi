@@ -800,6 +800,9 @@
           "availibity": {
             "type": "boolean"
           },
+          "link": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -858,6 +861,9 @@
           },
           "availibity": {
             "type": "boolean"
+          },
+          "link": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

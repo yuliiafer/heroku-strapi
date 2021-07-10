@@ -80,6 +80,9 @@
     },
     "availibity": {
       "type": "boolean"
+    },
+    "link": {
+      "type": "string"
     }
   }
 }
